@@ -1,0 +1,24 @@
+
+.mat-spacer {
+  flex: 1 1 auto;
+
+
+}
+
+:root {
+  --color-verde: #00FF00;
+}
+
+.logo-imag{
+
+    width: 220px;
+    height: 60px;
+
+}
+
+.logo-envio{
+
+    width: 46px;
+    height: 45px;
+
+}

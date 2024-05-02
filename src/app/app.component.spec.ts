@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'Event-Wear-Front' title`, () => {
+  it(`should have the 'envios-bd' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Event-Wear-Front');
+    expect(app.title).toEqual('envios-bd');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, Event-Wear-Front');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, envios-bd');
   });
 });
