@@ -24,5 +24,15 @@
       "price": 100,
       "rating": "4,5/5"
     }
+  ],
+  "shoppingCart": [
+    {
+      "id": "1",
+      "image": "https://raw.githubusercontent.com/SI729-2401-WS51-Grupo-4/Event-Wear-front/feature/AdrianoSebastianCruzPalomino/src/assets/product-1.png",
+      "title": "Traje de la Pantera Rosa",
+      "description": "Confeccionado con telas de alta calidad y una atención meticulosa a los detalles, este traje garantiza un ajuste perfecto y una apariencia impecable.",
+      "price": 100,
+      "rating": "4/5"
+    }
   ]
 }

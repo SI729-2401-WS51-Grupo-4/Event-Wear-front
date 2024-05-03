@@ -7,8 +7,8 @@ import { Product } from '../model/product.entity';
   providedIn: 'root'
 })
 export class ProductsService{
-  private baseUrl = 'https://my-json-server.typicode.com/AdrianoSCruzP/db-server'
-  //private baseUrl = 'http://localhost:3000';
+  //private baseUrl = 'https://my-json-server.typicode.com/AdrianoSCruzP/db-server'
+  private baseUrl = 'http://localhost:4000';
   constructor(private http: HttpClient) {  }
   getProducts(): Observable<any> {
     return this.http.get(`${this.baseUrl}/products`);
@@ -20,4 +20,10 @@ export class ProductsService{
   updateProduct(id: number, product: Product): Observable<any> {
     return this.http.put(`${this.baseUrl}/products/${id}`, product);
   }
+
+  addToCart(product: any): Observable<any> {
+    return this.http.post(`${this.baseUrl}/shoppingCart`, product);
+  }
+
+
 }

@@ -91,6 +91,13 @@
   justify-content: flex-end;
   margin-right: 280px;
 }
+.button-cart-container {
+  background-color: #87BB66;
+  color: #FBFBFBFF;
+
+}
+
+
 .button-container h2{
   margin-right: 10px;
 }
@@ -134,3 +141,17 @@
     font-size: 30px;
   }
 }
+
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: 100px;
+  background-color: red;
+  color: white;
+  border-radius: 80%;
+  padding: 2px 6px;
+  font-size: 12px;
+  width: 2px;
+}
+
