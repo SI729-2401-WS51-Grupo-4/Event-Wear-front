@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
 .product-card-list {
   display: flex;
   justify-content: center; /* Centra las tarjetas de productos horizontalmente */
@@ -36,15 +35,12 @@
 }
 
 .title {
-  margin: 0 40px;
   font-size: 40px; /* Aumenta el tamaño de la fuente */
-  font-family: 'M PLUS 1', sans-serif;
   margin-bottom: 5px;
 }
 
 .product-description {
   font-family: 'M PLUS 1', sans-serif;
-  margin: 0 40px;
   font-size: 27px;
   margin-bottom: 5px;
   max-width: 100%; /* Asegúrate de que la descripción tenga un ancho máximo */
@@ -82,7 +78,7 @@
 
 .main-title {
   font-size: 50px;
-  font-family: 'M PLUS 1', sans-serif;
+  font-family: sans-serif;
   margin: 50px 300px;
   text-align: left; /* Alinea el texto a la izquierda */
 }

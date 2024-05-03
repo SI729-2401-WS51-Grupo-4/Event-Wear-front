@@ -6,7 +6,7 @@
       "title": "Traje de la Pantera Rosa",
       "description": "Confeccionado con telas de alta calidad y una atención meticulosa a los detalles, este traje garantiza un ajuste perfecto y una apariencia impecable.",
       "price": 100,
-      "rating": "4/5"
+      "rating": "4"
     },
     {
       "id": "2",
@@ -14,7 +14,7 @@
       "title": "Gafas de Esquí de Alto Rendimiento",
       "description": "Estas gafas de esquí de alto rendimiento están diseñadas para ofrecer una visión clara y sin distorsiones en las condiciones más extremas.",
       "price": 70,
-      "rating": "3,5/5"
+      "rating": "3,5"
     },
     {
       "id": "3",
@@ -22,7 +22,7 @@
       "title": "Conjunto vestimenta de marinera norteña",
       "description": "Este conjunto de vestimenta de marinera norteña incluye una falda, una blusa y un pañuelo. Está confeccionado con telas de alta calidad y una atención meticulosa a los detalles.",
       "price": 100,
-      "rating": "4,5/5"
+      "rating": "4,5"
     }
   ]
 }

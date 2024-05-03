@@ -18,8 +18,11 @@
     </label>
     <label>
       <h2>Rating:</h2>
-      <input type="text" formControlName="rating">
+      <input type="number" formControlName="rating" min="1" max="5">
     </label>
     <button type="submit">Guardar producto</button>
+    <div *ngIf="submitted && productForm.invalid" class="error-message">
+      Por favor, completa correctamente todos los campos del formulario.
+    </div>
   </form>
 </div>

@@ -16,19 +16,11 @@ import {RouterLink} from "@angular/router";
 })
 export class ProductCardComponent {
   @Input() products: Array<Product> = [];
-  filteredProducts: Array<Product> = [];
 
   constructor(private productsService: ProductsService) {}
   ngOnInit(): void {
-    this.productsService.getProducts().subscribe((data: any) => {
+    this.productsService.getAll().subscribe((data: any) => {
       this.products = data;
-      this.filteredProducts = [...this.products];
     });
-  }
-  applyFilter(event:Event) {
-    const filterValue = (event.target as HTMLInputElement).value.trim().toLowerCase();
-    this.filteredProducts = this.products.filter(product =>
-      product.title.toLowerCase().includes(filterValue) || product.description.toLowerCase().includes(filterValue)
-    );
   }
 }

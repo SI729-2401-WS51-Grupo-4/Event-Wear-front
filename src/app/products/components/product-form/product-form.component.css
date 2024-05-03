@@ -55,3 +55,7 @@ textarea {
   resize: none; /* Agrega esta línea */
   overflow: auto; /* Agrega esta línea */
 }
+.error-message {
+  color: red;
+  margin-top: 10px;
+}

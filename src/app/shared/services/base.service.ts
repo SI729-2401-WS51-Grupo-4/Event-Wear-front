@@ -1,6 +1,6 @@
 import { environment } from "../../../environments/environment";
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
-import { catchError, Observable, retry, throwError } from "rxjs";
+import { catchError, Observable, retry, throwError, concatMap} from "rxjs";
 export class BaseService<T> {
   basePath: string = `${environment.serverBasePath}`;
   resourceEndpoint: string = '/resources';
@@ -26,8 +26,9 @@ export class BaseService<T> {
 
   // Create Resource
   create(item: any): Observable<T> {
+    console.log(item);
     return this.http.post<T>(this.resourcePath(), JSON.stringify(item), this.httpOptions)
-      .pipe(retry(2), catchError(this.handleError));
+      .pipe(retry(2), catchError(this.handleError), concatMap(() => this.getAll())) ;
   }
 
   // Delete Resource
