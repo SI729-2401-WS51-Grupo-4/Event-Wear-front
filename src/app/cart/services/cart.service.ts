@@ -9,7 +9,6 @@ import {Product} from "../../products/model/product.entity";
   providedIn: 'root'
 })
 export class CartsService{
-  //private baseUrl = ' https://my-json-server.typicode.com/U202211390/eventwear'
   private baseUrl = 'http://localhost:4000';
   constructor(private http: HttpClient) {}
 
@@ -21,4 +20,16 @@ export class CartsService{
     return this.http.delete(`${this.baseUrl}/shoppingCart/${itemId}`);
   }
 
+  updateQuantity(itemId: number, quantity: number): Observable<any> {
+  console.log(`Updating quantity for item ${itemId} to ${quantity}`);
+  if (quantity > 0) {
+    // Si la cantidad es mayor que 0, actualiza la cantidad
+    return this.http.put(`${this.baseUrl}/shoppingCart/${itemId}`, {quantity});
+  } else {
+    // Si la cantidad es 0, elimina el producto del carrito
+    return this.http.delete(`${this.baseUrl}/shoppingCart/${itemId}`);
+  }
 }
+}
+
+
