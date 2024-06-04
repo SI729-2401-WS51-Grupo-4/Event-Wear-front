@@ -1,0 +1,58 @@
+{
+  "productDetails":
+    {
+      "id": 2,
+      "image": "https://images-na.ssl-images-amazon.com/images/I/51-2c-YsveL._AC_SL1001_.jpg",
+      "title": "Gafas de esqui de alto rendimiento",
+      "description": "Prepaarte para conquistar las pistas de esqui con nuestras gafas de esqui de alto rendimiento. Diseñadas para brindarte la maxima protexccion y comodidad mientras disfrutas de tus aventuras en la nieve, estas gafas son imprescindibles para cualquier entusiasta del esqui  y snowboard",
+      "price": 70,
+      "rating": {
+        "value": "3,5",
+        "quantity": 33
+      },
+      "characteristics": [
+        {
+          "name": "Proteccion superior",
+          "content": "Las lentes de alta calidad offrecen una proteccion UV excepcional y reducen el deslumbramiento para una mal al gasgdagsdg"
+        },
+        {
+          "name": "Proteccion superior",
+          "content": "Las lentes de alta calidad offrecen una proteccion UV excepcional y reducen el deslumbramiento para una mal al gasgdagsdg"
+        },
+        {
+          "name": "Proteccion superior",
+          "content": "Las lentes de alta calidad offrecen una proteccion UV excepcional y reducen el deslumbramiento para una mal al gasgdagsdg"
+        }
+      ],
+      "lessor": {
+        "name": "Juan Alberto",
+        "image": "https://img.freepik.com/premium-vector/businessman-profile-cartoon_18591-58479.jpg",
+        "rentals": 20
+      },
+      "comments":[
+        {
+          "user": "Jose Moreno",
+          "commentary": "Buena calidad"
+        },
+        {
+          "user": "Tom Morello",
+          "commentary": "EZxcelente"
+        },
+        {
+          "user": "Serj Tanjaik",
+          "commentary": "Esperaba algo mejor"
+        }
+      ]
+    },
+  "favoritos":[
+    {
+      "id": 1
+    },
+    {
+      "id": 10
+    },
+    {
+      "id": 50
+    }
+  ]
+}
