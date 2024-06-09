@@ -1,0 +1,64 @@
+.card-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Espacio vertical entre tarjetas */
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+  border-radius: 8px; /* Bordes ligeramente menos redondeados */
+  overflow: hidden;
+  background-color: #fff;
+  padding: 20px; /* Espacio interno para todo el contenido de la tarjeta */
+}
+
+.card-img-top {
+  flex-basis: 180px; /* Base del tamaño de imagen más controlada */
+  height: 180px; /* Altura fija para la imagen */
+  margin-right: 20px; /* Margen derecho para separar texto de imagen */
+  object-fit: cover;
+}
+
+.card-body {
+  flex: 1; /* Asegura que el cuerpo ocupe el espacio restante */
+  padding: 0; /* Elimina relleno extra del body para usar el global de .card */
+}
+
+.card-title {
+  font-size: 20px; /* Tamaño de fuente aumentado para el título */
+  margin-bottom: 10px; /* Espacio bajo el título */
+  color: #333; /* Color oscuro para el título */
+}
+
+.card-price {
+  font-size: 16px;
+  margin-bottom: 10px; /* Añadido espacio bajo el precio antes de la valoración */
+  font-weight: bold;
+  color: #E64A19; /* Color oscuro para el precio */
+}
+
+.card-rating {
+  display: flex;
+  align-items: center; /* Alinea íconos de estrella con el texto */
+}
+
+.card-rating span {
+  margin-left: 5px;
+  font-size: 14px; /* Tamaño de texto para la calificación */
+}
+
+.card-rating img {
+  width: 16px; /* Tamaño de las estrellas */
+  height: auto;
+}
+
+.card-total {
+  position: fixed; /* Posición fija en la ventana del navegador */
+  top: 0; /* Se fija en la parte superior */
+  margin-top: 20px; /* Espacio adicional desde la parte superior */
+  margin-left: 500px;
+  z-index: 999; /* Coloca el elemento por encima de otros contenidos */
+}
+

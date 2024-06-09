@@ -1,0 +1,58 @@
+.example-card {
+  width: 100%;
+  max-width: 1100px;
+  margin: 70px auto;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+
+
+}
+
+.example-header-image {
+    width: 100%; /* Ancho completo de la imagen */
+    max-width: 320px; /*Ancho máximo*/
+  height: 250px;
+}
+
+mat-card-header,
+mat-card-content,
+mat-card-actions {
+  flex: 1;
+}
+
+.content-right {
+  padding: 0 16px; /* Espaciado interno */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width:100px;
+
+}
+
+.contenedor{
+    display: flex;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: flex-end; /* Alinea los botones a la derecha */
+}
+
+.informacion{
+  width:500px;
+}
+
+@media (max-width: 877px) and (max-height: 1098px) {
+  .contenedor {
+    display: block;
+  }
+
+}
+
+.titulo {
+    margin-top: 50px;
+    font-family: 'M PLUS 1', sans-serif;
+    margin-left: 90px;
+    font-size: 40px; /* Tamaño de la fuente */
+}
+
+

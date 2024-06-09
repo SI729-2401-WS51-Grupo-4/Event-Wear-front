@@ -1,0 +1,25 @@
+<div class="container">
+  <form class="form-container" [formGroup]="productForm" (ngSubmit)="saveProduct()">
+    <label>
+      <h2>Image URL:</h2>
+      <input type="text" formControlName="image">
+    </label>
+    <label>
+      <h2>Title:</h2>
+      <input type="text" formControlName="title">
+    </label>
+    <label>
+      <h2>Description:</h2>
+      <textarea formControlName="description"></textarea>
+    </label>
+    <label>
+      <h2>Price:</h2>
+      <input type="number" formControlName="price">
+    </label>
+    <label>
+      <h2>Rating:</h2>
+      <input type="text" formControlName="rating">
+    </label>
+    <button type="submit">Guardar producto</button>
+  </form>
+</div>

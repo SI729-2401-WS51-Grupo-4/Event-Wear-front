@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1:wght@100..900&display=swap');
+.product-card-list {
+  display: flex;
+  justify-content: center; /* Centra las tarjetas de productos horizontalmente */
+  flex-wrap: wrap; /* Permite que las tarjetas de productos se envuelvan a la siguiente línea si no hay suficiente espacio */
+  width: 70%; /* Utiliza todo el ancho disponible */
+}
+.product-card {
+  display: flex;
+  margin: 30px 0;
+  border: none; /* Quita los estilos del borde */
+}
+
+.card-content {
+  display: flex;
+  width: 100%;
+}
+
+.image-container {
+  flex: 0 0 auto;
+  width: 300px; /* Tamaño fijo para el contenedor de la imagen */
+  height: 300px; /* Tamaño fijo para el contenedor de la imagen */
+  margin-right: 10px; /* Espacio entre la imagen y la información */
+}
+
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: Scale-down; /* La imagen se redimensionará para llenar el contenedor manteniendo su aspecto */
+}
+
+.info-container {
+  flex: 1;
+  display: flex; /* Añade Flexbox */
+  flex-direction: column; /* Añade Flexbox */
+}
+
+.title {
+  margin: 0 40px;
+  font-size: 40px; /* Aumenta el tamaño de la fuente */
+  font-family: 'M PLUS 1', sans-serif;
+  margin-bottom: 5px;
+}
+
+.product-description {
+  font-family: 'M PLUS 1', sans-serif;
+  margin: 0 40px;
+  font-size: 27px;
+  margin-bottom: 5px;
+  max-width: 100%; /* Asegúrate de que la descripción tenga un ancho máximo */
+  overflow: auto; /* Permite el desplazamiento si el texto es demasiado largo */
+  flex-grow: 1; /* Permite que la descripción crezca para llenar el espacio disponible */
+  display: flex; /* Añade Flexbox */
+  align-items: center; /* Centra verticalmente el contenido */
+  line-height: 1.5; /* Aumenta el interlineado */
+}
+
+.price-rating {
+  font-family: 'M PLUS 1', sans-serif;
+  margin: 10px 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.price {
+  font-size: 27px;
+  border-bottom: 2px solid black; /* Subraya el precio con un borde inferior */
+  padding-bottom: 5px;
+}
+
+.rating {
+  font-size: 27px;
+  border-bottom: 3px solid yellow; /* Subraya la calificación con un borde inferior */
+  padding-bottom: 5px;
+}
+
+.product-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Alinea los elementos hijos al inicio (izquierda) */
+}
+
+.main-title {
+  font-size: 50px;
+  font-family: 'M PLUS 1', sans-serif;
+  margin: 50px 300px;
+  text-align: left; /* Alinea el texto a la izquierda */
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 280px;
+}
+.button-cart-container {
+  background-color: #87BB66;
+  color: #FBFBFBFF;
+
+}
+
+
+.button-container h2{
+  margin-right: 10px;
+}
+/* Estilos para pantallas de tamaño mediano (tablet) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .main-title {
+    margin: 20px;
+  }
+  .card-content {
+    flex-direction: column; /* Cambia el contenido de la tarjeta a una columna */
+  }
+  .product-card {
+    width: 85%;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .product-description {
+    font-size: 18px;
+  }
+  .main-title {
+    font-size: 35px;
+  }
+}
+
+/* Estilos para pantallas de tamaño pequeño (mobile) */
+@media (max-width: 767px) {
+  .main-title {
+    margin: 20px;
+  }
+  .card-content {
+    flex-direction: column; /* Cambia el contenido de la tarjeta a una columna */
+  }
+  .title {
+    font-size: 20px;
+  }
+  .product-description {
+    font-size: 16px;
+  }
+  .main-title {
+    font-size: 30px;
+  }
+}
+
+
+.cart-count {
+  position: absolute;
+  top: -5px;
+  right: 100px;
+  background-color: red;
+  color: white;
+  border-radius: 80%;
+  padding: 2px 6px;
+  font-size: 12px;
+  width: 2px;
+}
+

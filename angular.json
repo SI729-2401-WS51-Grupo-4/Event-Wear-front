@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Event-Wear-Front": {
+    "envios-ew": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/event-wear-front",
+            "outputPath": "dist/envios-ew",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -58,10 +58,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "Event-Wear-Front:build:production"
+              "buildTarget": "envios-ew:build:production"
             },
             "development": {
-              "buildTarget": "Event-Wear-Front:build:development"
+              "buildTarget": "envios-ew:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -69,7 +69,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "Event-Wear-Front:build"
+            "buildTarget": "envios-ew:build"
           }
         },
         "test": {
@@ -93,5 +93,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

@@ -1,0 +1,10 @@
+.register-container {
+  width: 300px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.error-message {
+  color: red;
+  margin-top: 10px;
+}
