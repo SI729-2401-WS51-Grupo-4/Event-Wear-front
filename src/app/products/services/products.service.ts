@@ -8,7 +8,7 @@ import { switchMap } from 'rxjs/operators';
 })
 export class ProductsService{
   //private baseUrl = 'https://my-json-server.typicode.com/AdrianoSCruzP/db-server'
-  private baseUrl = 'http://localhost:4000';
+  private baseUrl = 'http://localhost:3000';
   constructor(private http: HttpClient) {  }
   getProducts(): Observable<any> {
     return this.http.get(`${this.baseUrl}/products`);

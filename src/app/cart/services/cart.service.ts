@@ -9,7 +9,7 @@ import {Product} from "../../products/model/product.entity";
   providedIn: 'root'
 })
 export class CartsService{
-  private baseUrl = 'http://localhost:4000';
+  private baseUrl = 'http://localhost:3000';
   constructor(private http: HttpClient) {}
 
   getCartItems(): Observable<any> {
