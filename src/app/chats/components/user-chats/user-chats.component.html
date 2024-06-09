@@ -1,0 +1,21 @@
+<h1 class="titulo">Lista de Chats</h1>
+
+<div class="card-container">
+  <mat-card *ngFor="let chat of chats" class="example-card">
+    <div class="contenedor">
+      <mat-card-content class="content-right">
+        <mat-card-title>{{ chat.timestamp }}</mat-card-title>
+        <div class="informacion">
+          <p><strong>Chat ID: </strong>{{ chat.chat_id }}</p>
+          <p><strong>Message Count: </strong>{{ chat.message_count }}</p>
+          <p><strong>Chat Status: </strong>{{ chat.chat_status }}</p>
+          <p><strong>Arrendador: </strong>{{ chat.participants.landlorname }}</p>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-button [routerLink]="['/messages']">Ir a chat</button>
+      </mat-card-actions>
+    </div>
+  </mat-card>
+</div>

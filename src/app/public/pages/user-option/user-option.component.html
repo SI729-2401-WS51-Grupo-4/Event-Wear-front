@@ -1,0 +1,12 @@
+<div class="home-container">
+  <h1>Bienvenido</h1>
+  <p>Correo electrónico: {{ currentUser?.username }}</p>
+  <button (click)="logout()">Cerrar sesión</button>
+
+  <div class="options-container">
+    <button class="option-button">Preferencias</button>
+    <button class="option-button" >Actividad</button>
+    <button class="option-button" >Productos Publicados</button>
+    <button class="option-button" >Lista de Favoritos</button>
+  </div>
+</div>

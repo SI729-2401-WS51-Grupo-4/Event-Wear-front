@@ -1,0 +1,60 @@
+<div class="details">
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title-group>
+        <img alt="{{details.title}}" src="{{details.image}}" class="product-image">
+        <div class="center-content">
+          <h1 style="text-align: left" class="description-title">{{details.title}}</h1>
+          <div class="description">
+            <p>{{details.description}}</p>
+            <p>Caracteristicas: </p>
+            <ul>
+              <li *ngFor="let characteristic of details.characteristics">{{characteristic.name}}: {{characteristic.content}}</li>
+            </ul>
+          </div>
+        </div>
+        <div class="right-content">
+          <p style="text-align: center; margin-bottom: 15%; font-size: 1.2em"> <mat-icon fontIcon="star" style="color: #F1C300FF"></mat-icon> {{details.rating.value}}/5 ({{details.rating.quantity}})</p>
+          <div class="compra">
+            <p style="font-weight: bold; font-size: 1.4em">S/. {{details.price}}</p>
+            <button class="mat-button-base">Comprar ahora</button>
+            <br>
+            <button class="mat-button-base">Añadir al carro <mat-icon fontIcon="shopping cart"></mat-icon></button>
+          </div>
+        </div>
+      </mat-card-title-group>
+    </mat-card-header>
+  </mat-card>
+</div>
+<div class="interactions">
+  <div class="lessor-div">
+    <mat-card class="lessor-card">
+      <mat-card-header>
+        <mat-card-title-group>
+          <img src="{{details.lessor.image}}" class="lessor-image">
+          <div>{{details.lessor.name}}</div>
+        </mat-card-title-group>
+      </mat-card-header>
+      <mat-card-content>
+        <p style="text-align: left">{{details.lessor.rentals}} alquileres realizados en los ultimos 3 meses</p>
+        <button class="mat-button-base chat-button" [routerLink]="['/chats']" style="margin-top: 0px">Chatea con el arrendor <mat-icon fontIcon="chat"></mat-icon></button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+
+  <div class="comentarios">
+    <div style="display: flex">
+      <h3 style="font-size: 2em; margin-bottom: 5%">Comentarios</h3>
+      <button class="mat-button-base more-comments">ver todo</button>
+    </div>
+    <div class="comments">
+      <mat-card *ngFor="let comment of details.comments" class="comentario">
+        <p>{{comment.user}}</p>
+        <p>{{comment.commentary}}</p>
+      </mat-card>
+    </div>
+  </div>
+</div>
+<div class="favorite">
+  <button class="favorite-button mat-button-base" (click)="favoriteButton()"> <mat-icon fontIcon="star" style="color: #F1C300FF"></mat-icon> {{textoFavorito}}</button>
+</div>

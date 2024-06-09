@@ -1,0 +1,67 @@
+/* Establecer colores */
+.login-container {
+  max-width: 400px;
+  margin: 0 auto; /* Esto centra horizontalmente el contenedor */
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  background-color: #87BB66;
+  color: white;
+  position: absolute; /* Esto permite centrar verticalmente */
+  top: 50%; /* Posiciona el contenedor a la mitad de la pantalla verticalmente */
+  left: 50%; /* Posiciona el contenedor a la mitad de la pantalla horizontalmente */
+  transform: translate(-50%, -50%); /* Centra el contenedor completamente */
+}
+
+
+
+.logo-imag{
+  display: block;
+  width: 400px;
+  height: 120px;
+  margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+}
+
+.login-container h2 {
+  text-align: center;
+}
+
+.login-container form div {
+  margin-bottom: 1rem;
+}
+
+.login-container form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.login-container form input {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.login-container form button {
+  width: 100%;
+  padding: 0.5rem;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-container form button:hover {
+  background-color: #0056b3;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+
+

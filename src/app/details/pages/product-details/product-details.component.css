@@ -1,0 +1,112 @@
+.product-image{
+  width: 25%;
+  max-height: 70%;
+  margin-left: 2%;
+}
+
+.center-content{
+  width: 40%;
+  margin: 0px 5% 0px 8%;
+}
+
+.chat-button{
+  font-size: 1em;
+}
+
+.comentario{
+  background-color: #f6f6f6;
+  width: 25%;
+  padding: 1% 2% 0 2%;
+  margin: 0 4%;
+}
+
+.comentarios{
+  padding: 0px 5%;
+  width: 70%;
+}
+
+.comments{
+  display: flex;
+}
+
+.compra{
+  background-color: #87BB66;
+  text-align: center;
+  padding: 15% 0px;
+}
+
+.details{
+  padding: 2%;
+  margin-top: 1%;
+}
+
+.description{
+  background-color: #f6f6f6;
+  padding: 2%;
+  font-size: 1.2em;
+  max-height: 280px;
+  overflow: auto;
+}
+
+.description-title{
+  margin-bottom: 5%;
+  font-size: 2.2em;
+}
+
+.favorite-button{
+  margin: 1% 0 1% 2%;
+  padding: 1%;
+}
+
+.interactions{
+  padding: 2%;
+  display: flex;
+  justify-content: normal;
+}
+
+.lessor-card{
+  padding: 0 6%;
+  text-align: center;
+}
+
+.lessor-div{
+  padding: 1%;
+  background-color: #87BB66;
+  border-radius: 10%;
+  width: 22%;
+}
+
+.lessor-image{
+  max-width: 30%;
+}
+
+.more-comments{
+  margin: 0;
+  padding: 0;
+  margin-left: 70%;
+  border-radius: 0;
+  background-color: white;
+  right: 0;
+  height: 50%;
+}
+
+.right-content{
+  width: 18%;
+  font-size: 1.2em;
+}
+
+button{
+  background-color: #C1EAF2;
+  font-size: 1.1em;
+  border-radius: 40px;
+  margin: 6%;
+  padding: 5%;
+}
+
+li{
+  margin-bottom: 4%;
+}
+
+.mat-mdc-card-title-group{
+  justify-content: normal;
+}

@@ -1,0 +1,17 @@
+<div *ngFor="let chat of messages" class="chat-container">
+  <ul>
+    <ng-container *ngFor="let message of chat.messages">
+      <ng-container *ngIf="message.chat_id === '1'">
+        <li [ngClass]="{'user-message': message.user_id.startsWith('user'), 'landlord-message': message.user_id.startsWith('landlord')}">
+          <p class="timestamp">Timestamp: {{ message.timestamp }}</p>
+          <p class="content">Content: {{ message.content }}</p>
+        </li>
+      </ng-container>
+    </ng-container>
+  </ul>
+</div>
+
+<div class="message-input-container">
+  <input type="text" placeholder="Escribe tu mensaje...">
+  <button >Enviar</button>
+</div>
