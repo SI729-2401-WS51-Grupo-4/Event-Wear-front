@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class EventWearApiService {
-  private baseUrl = 'http://localhost:3000'
+  private baseUrl = 'https://my-json-server.typicode.com/AdrianoSCruzP/Category'
   /*https://my-json-server.typicode.com/SI729-2401-WS51-Grupo-4/db-server */
   constructor(private http: HttpClient) { }
 

@@ -9,7 +9,7 @@ import {Product} from "../../products/model/product.entity";
   providedIn: 'root'
 })
 export class CartsService{
-  private baseUrl = 'http://localhost:3000';
+  private baseUrl = 'https://my-json-server.typicode.com/AdrianoSCruzP/cart-items';
   constructor(private http: HttpClient) {}
 
   getCartItems(): Observable<any> {

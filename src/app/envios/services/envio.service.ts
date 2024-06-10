@@ -6,11 +6,13 @@ import {  Envio } from "../model/envio.entity"
 @Injectable({
   providedIn: 'root'
 })
-export class EnvioService extends BaseService<Envio>
+export class EnvioService
 {
-  constructor(http: HttpClient) {
-    super(http);
-    this.resourceEndpoint = '/envios';
+  private baseUrl = 'https://my-json-server.typicode.com/AdrianoSCruzP/Envios';
+  constructor(private http: HttpClient) { }
 
+  getAll  (): any {
+    return this.http.get(`${this.baseUrl}/envios`);
   }
+
 }

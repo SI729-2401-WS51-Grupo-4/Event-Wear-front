@@ -6,11 +6,12 @@ import {  Chat } from "../model/chat.entity"
 @Injectable({
   providedIn: 'root'
 })
-export class ChatService extends BaseService<Chat>{
+export class ChatService{
+  private baseUrl = 'https://my-json-server.typicode.com/AdrianoSCruzP/chat';
+  constructor(private http: HttpClient) { }
 
-  constructor(http: HttpClient) {
-    super(http);
-    this.resourceEndpoint = '/chats';
-
+  getAll  (): any {
+    return this.http.get(`${this.baseUrl}/chats`);
   }
+
 }
