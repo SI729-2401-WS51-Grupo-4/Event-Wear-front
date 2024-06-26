@@ -1,0 +1,37 @@
+<div class="container">
+  <form class="form-container" [formGroup]="categoryForm" (ngSubmit)="saveCategory()">
+
+    <label>
+      <h2>Category Name:</h2>
+      <input type="text" formControlName="category_name">
+    </label>
+    <label>
+      <h2>Category Type:</h2>
+      <input type="text" formControlName="category_type">
+    </label>
+    <label>
+      <h2>Price:</h2>
+      <input type="number" formControlName="price_range">
+    </label>
+    <label>
+      <h2>Description:</h2>
+      <textarea formControlName="description"></textarea>
+    </label>
+    <label>
+      <h2>Rating:</h2>
+      <input type="number" formControlName="rate">
+    </label>
+    <label>
+      <h2>Category Image URL:</h2>
+      <input type="text" formControlName="image2" (input)="updateImageUrl()">
+    </label>
+    <div class="image-preview" *ngIf="imageUrl">
+      <img [src]="imageUrl" alt="Category Image">
+    </div>
+    <label>
+      <input type="checkbox" formControlName="isFavorite">
+      Favorito
+    </label>
+    <button type="submit" routerLink="/product-list">Guardar producto</button>
+  </form>
+</div>

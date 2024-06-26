@@ -4,7 +4,7 @@ import {MatCardModule} from '@angular/material/card';
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import {Product} from "../../model/product.entity";
+import {Category} from "../../model/category.entity";
 import { EventWearApiService } from '../../services/event-wear-api.service';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
@@ -30,10 +30,10 @@ import { RouterModule } from '@angular/router';
   styleUrl: './product-list.component.css'
 })
 export class ProductListComponent implements OnInit {
-  products: Array<Product> = [];
+  categories: Array<Category> = [];
   displayedColumns: string[] = ['Categorias existentes'];
   columnsToDisplayWithExpand = [...this.displayedColumns, 'expand'];
-  expandedElement: Product | null = null;
+  expandedElement: Category | null = null;
   dataSource: any;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
     constructor(private eventwearApiService: EventWearApiService) {
@@ -45,9 +45,9 @@ export class ProductListComponent implements OnInit {
     }
 
      ngOnInit(): void {
-       this.eventwearApiService.getProducts().subscribe((data: any) => {
-         this.products = data;
-         this.dataSource = new MatTableDataSource(this.products);
+       this.eventwearApiService.getCategories().subscribe((data: any) => {
+         this.categories = data;
+         this.dataSource = new MatTableDataSource(this.categories);
          this.dataSource.paginator = this.paginator; // Asignar el paginador
          console.log(this.dataSource);
        });

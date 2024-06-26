@@ -1,0 +1,14 @@
+<div class="container">
+  <div class="form-container">
+    <form [formGroup]="deleteForm" (ngSubmit)="deleteCategory()">
+      <label>
+        <h2>Eliminar Categoría por ID:</h2>
+        <input type="text" formControlName="id">
+      </label>
+      <button type="submit" class="delete-button">Eliminar Categoría</button>
+    </form>
+    <div class="back-button">
+      <button mat-raised-button class="back-button" routerLink="/product-list">Volver</button>
+    </div>
+  </div>
+</div>

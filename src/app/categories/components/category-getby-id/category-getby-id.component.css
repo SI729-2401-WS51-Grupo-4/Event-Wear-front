@@ -1,0 +1,40 @@
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+button[type="submit"] {
+  background-color: #2196f3;
+  color: white;
+  padding: 16px;
+  font-size: 18px;
+  border: none;
+  cursor: pointer;
+}
+
+button[type="submit"]:hover {
+  background-color: #0d47a1; /* Azul más oscuro al pasar el mouse */
+}
+
+.error-message {
+  font-size: 25px; /* Tamaño de letra más grande para el mensaje de error */
+  color: #00000; /* Color rojo para el mensaje de error */
+  margin-top: 10px; /* Espacio superior para separar del contenido */
+}

@@ -1,0 +1,44 @@
+/* category-get-favorites.component.css */
+
+.container {
+  width: 80%;
+  margin: auto;
+  padding: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+
+ul li hr {
+  margin-top: 10px;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+ul li strong {
+  display: inline-block;
+  min-width: 100px;
+  font-size: 18px; /* Tamaño de fuente más grande */
+}
+
+p.no-categories {
+  font-style: italic;
+  color: #888;
+  font-size: 20px; /* Tamaño de fuente más grande */
+}

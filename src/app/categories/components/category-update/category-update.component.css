@@ -1,0 +1,91 @@
+.container {
+  width: 30%; /* Reduciendo aún más el ancho del contenedor */
+  margin: auto;
+  padding: 40px;
+  background-color: #f5f5f5; /* Fondo gris claro */
+  border-radius: 8px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); /* Sombra ligera */
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-container label {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #333; /* Color de texto oscuro */
+}
+
+.form-container input[type="text"],
+.form-container input[type="number"],
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-container textarea {
+  resize: vertical; /* Permitir redimensionamiento vertical en textarea */
+}
+
+.image-preview {
+  margin-top: 10px;
+}
+
+.image-preview img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+.form-container input[type="checkbox"] {
+  margin-top: 8px;
+}
+
+.button-container button {
+  min-width: 250px; /* Aumentando el ancho mínimo */
+  font-size: 20px; /* Aumentando el tamaño de la fuente */
+  padding: 16px 24px; /* Aumentando el relleno */
+  border-radius: 8px; /* Haciendo los bordes más redondeados */
+  transition: background-color 0.3s ease;
+}
+
+.button-container button {
+  min-width: 250px; /* Aumentando el ancho mínimo */
+  font-size: 20px; /* Aumentando el tamaño de la fuente */
+  padding: 16px 24px; /* Aumentando el relleno */
+  border-radius: 8px; /* Haciendo los bordes más redondeados */
+  transition: background-color 0.3s ease;
+}
+
+.button-container button[type="submit"] {
+  background-color: #2196f3; /* Azul */
+  color: white;
+}
+
+.button-container button[type="submit"]:hover {
+  background-color: #0d47a1; /* Azul más oscuro al pasar el mouse */
+}
+
+.button-container button[color="primary"] {
+  background-color: #2196f3; /* Azul */
+  color: white;
+}
+
+.button-container button[color="primary"]:hover {
+  background-color: #0d47a1; /* Azul más oscuro al pasar el mouse */
+}
+
+.button-container button[color="warn"] {
+  background-color: #f44336; /* Rojo */
+  color: white;
+}
+
+.button-container button[color="warn"]:hover {
+  background-color: #d32f2f; /* Rojo más oscuro al pasar el mouse */
+}

@@ -1,0 +1,72 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 20px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.form-container h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.form-container label {
+  display: block;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.form-container input {
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.form-container button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.form-container button.delete-button {
+  background-color: #f44336;
+  color: white;
+  border: none;
+}
+
+.form-container button.delete-button:hover {
+  background-color: #d32f2f;
+}
+
+.form-container button.back-button {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+}
+
+.form-container button.back-button:hover {
+  background-color: #0d47a1;
+}
+
+.back-button {
+  margin-top: 20px;
+}

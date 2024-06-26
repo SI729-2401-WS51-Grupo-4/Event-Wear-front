@@ -1,0 +1,27 @@
+<div class="container">
+  <form class="form-container" [formGroup]="getByIdForm" (ngSubmit)="getCategoryById()">
+    <label>
+      <h2>Buscar Categoría por ID:</h2>
+      <input type="number" formControlName="id">
+    </label>
+    <button type="submit">Obtener Categoría</button>
+  </form>
+
+  <div class="errorMessage" class="error-message">
+    {{ errorMessage }}
+  </div>
+
+  <div *ngIf="category">
+    <h2>Detalles de la Categoría</h2>
+    <ul>
+      <li><strong>ID:</strong> {{ category.id }}</li>
+      <li><strong>Nombre:</strong> {{ category.category_name }}</li>
+      <li><strong>Tipo:</strong> {{ category.category_type }}</li>
+      <li><strong>Precio:</strong> {{ category.price_range }}</li>
+      <li><strong>Descripción:</strong> {{ category.description }}</li>
+      <li><strong>Valoración:</strong> {{ category.rate }}</li>
+      <li><strong>Imagen URL:</strong> <img *ngIf="category.image2" [src]="category.image2" alt="Imagen de la categoría"></li>
+      <li><strong>Favorito:</strong> {{ category.isFavorite ? 'Sí' : 'No' }}</li>
+    </ul>
+  </div>
+</div>

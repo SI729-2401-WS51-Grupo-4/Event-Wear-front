@@ -1,44 +1,77 @@
 {
   "Category": [
     {
-      "price_range": "s/50 - s/700",
-      "category_type": "Trajes y disfraces",
-      "image": "https://s.alicdn.com/@sc04/kf/HTB1qjkOseuSBuNjSsplq6ze8pXaG.jpg_300x300.jpg",
-      "image2": "https://trialperu.vteximg.com.br/arquivos/ids/203251-700-1000/label-0.jpg?v=638161380223830000",
-      "description": "La categoría de \"Disfraces y Trajes\" ofrece una amplia variedad de opciones para eventos especiales y fiestas temáticas. Los precios oscilan entre 50 y 700 soles, brindando opciones para diferentes presupuesto",
-      "rate": "50"
+      "price_rangeC": "s/50 - s/700",
+      "category_nameC": "Trajes y disfraces",
+      "category_typeC": "Vestimenta",
+      "imageC": "https://s.alicdn.com/@sc04/kf/HTB1qjkOseuSBuNjSsplq6ze8pXaG.jpg_300x300.jpg",
+      "image2C": "https://trialperu.vteximg.com.br/arquivos/ids/203251-700-1000/label-0.jpg?v=638161380223830000",
+      "descriptionC": "La categoría de \"Disfraces y Trajes\" ofrece una amplia variedad de opciones para eventos especiales y fiestas temáticas. Los precios oscilan entre 50 y 700 soles, brindando opciones para diferentes presupuesto",
+      "rateC": "50"
     },
     {
-      "price_range": "s/30 - s/700",
-      "category_type": "Ropa casual",
-      "image": "https://i.pinimg.com/736x/6e/84/9f/6e849faf054988a44d8b1009e1d0de0e.jpg",
-      "image2": "https://i.pinimg.com/474x/60/71/07/6071078c86e225e8d69cc300f708d958.jpg",
-      "description": "Prendas cómodas y relajadas diseñadas para un uso diario informal, como camisetas, jeans y zapatillas, que ofrecen comodidad y estilo sin esfuerzo",
-      "rate": "458"
+      "price_rangeC": "s/30 - s/700",
+      "category_nameC": "Ropa casual",
+      "category_typeC": "Vestimenta",
+      "imageC": "https://i.pinimg.com/736x/6e/84/9f/6e849faf054988a44d8b1009e1d0de0e.jpg",
+      "image2C": "https://i.pinimg.com/474x/60/71/07/6071078c86e225e8d69cc300f708d958.jpg",
+      "descriptionC": "Prendas cómodas y relajadas diseñadas para un uso diario informal, como camisetas, jeans y zapatillas, que ofrecen comodidad y estilo sin esfuerzo",
+      "rateC": "458"
     },
     {
-      "price_range": "s/140 - s/1200",
-      "category_type": "Ropa deportiva",
-      "image": "https://home.ripley.com.pe/Attachment/WOP_5/2020333027992/2020333027992_2.jpg",
-      "image2": "https://falabella.scene7.com/is/image/FalabellaPE/120487451_1?wid=800&hei=800&qlt=70",
-      "description": "Prendas diseñadas específicamente para actividades físicas, como camisetas deportivas, pantalones cortos y leggings, que ofrecen comodidad, transpirabilidad y libertad de movimiento.",
-      "rate": "120"
+      "price_rangeC": "s/140 - s/1200",
+      "category_nameC": "Ropa deportiva",
+      "category_typeC": "Fitness",
+      "imageC": "https://home.ripley.com.pe/Attachment/WOP_5/2020333027992/2020333027992_2.jpg",
+      "image2C": "https://falabella.scene7.com/is/image/FalabellaPE/120487451_1?wid=800&hei=800&qlt=70",
+      "descriptionC": "Prendas diseñadas específicamente para actividades físicas, como camisetas deportivas, pantalones cortos y leggings, que ofrecen comodidad, transpirabilidad y libertad de movimiento.",
+      "rateC": "120"
     },
     {
-      "price_range": "s/20 - s/80",
-      "category_type": "Ropa íntima",
-      "image": "https://media.revistagq.com/photos/602e4d8640a1d479f12b6481/master/w_1600%2Cc_limit/4fec08833fc44036b3cc4ea8e291fb1f.jpg",
-      "image2": "https://arrow.cl/638090-large_default/calcetines-pack-3-unidades-classic-arrow.jpg",
-      "description": "Prendas diseñadas para ser usadas debajo de la ropa exterior, como sujetadores, calzoncillos y calcetines, que ofrecen comodidad y soporte.",
-      "rate": "674"
+      "price_rangeC": "s/20 - s/80",
+      "category_nameC": "Ropa íntima",
+      "category_typeC": "Vestimenta",
+      "imageC": "https://media.revistagq.com/photos/602e4d8640a1d479f12b6481/master/w_1600%2Cc_limit/4fec08833fc44036b3cc4ea8e291fb1f.jpg",
+      "image2C": "https://arrow.cl/638090-large_default/calcetines-pack-3-unidades-classic-arrow.jpg",
+      "descriptionC": "Prendas diseñadas para ser usadas debajo de la ropa exterior, como sujetadores, calzoncillos y calcetines, que ofrecen comodidad y soporte.",
+      "rateC": "674"
     },
     {
-      "price_range": "s/55 - s/200",
-      "category_type": "Ropa de baño",
-      "image": "https://aquasport-peru.com/media/catalog/product/cache/1/image/e893c830666e142def6ba5603e9efb35/principales/3130600A_speedo.jpg",
-      "image2": "https://oneill.pe/cdn/shop/files/Disenosintitulo_79_39df8bcb-9dcc-41b8-b193-537e865d2deb.png?v=1706571796&width=1200",
-      "description": "Prendas diseñadas para ser usadas en entornos acuáticos, como bikinis, bañadores y pareos, que ofrecen comodidad y estilo en la playa o la piscina.",
-      "rate": "100"
+      "price_rangeC": "s/55 - s/200",
+      "category_nameC": "Ropa de baño",
+      "category_typeC": "Vestimenta",
+      "imageC": "https://aquasport-peru.com/media/catalog/product/cache/1/image/e893c830666e142def6ba5603e9efb35/principales/3130600A_speedo.jpg",
+      "image2C": "https://oneill.pe/cdn/shop/files/Disenosintitulo_79_39df8bcb-9dcc-41b8-b193-537e865d2deb.png?v=1706571796&width=1200",
+      "descriptionC": "Prendas diseñadas para ser usadas en entornos acuáticos, como bikinis, bañadores y pareos, que ofrecen comodidad y estilo en la playa o la piscina.",
+      "rateC": "100"
+    },
+    {
+      "id": "0b2d",
+      "category_nameC": "Sandalias",
+      "category_typeC": "Vestimenta",
+      "price_rangeC": 223,
+      "descriptionC": "es buena calidad",
+      "rateC": 333,
+      "image2C": "https://www.eluniversal.com.mx/resizer/xOd1884oJKVjHgMwAQAmJee7toU=/1200x740/cloudfront-us-east-1.images.arcpublishing.com/eluniversal/LCDTAWH7PBE6FCNHBZ6WRWHFEU.jpg"
+    },
+    {
+      "id": "1938",
+      "category_nameC": "ssandasl",
+      "category_typeC": "vestimenta",
+      "price_rangeC": 32,
+      "descriptionC": "fdfsss",
+      "rateC": 33,
+      "image2C": "https://d3fvqmu2193zmz.cloudfront.net/items_2/uid_commerces.1/uid_items_2.null/1500x1500/651C4D542D569-Sandalias-Mujer-Zm-944-Goma-Eva-Beige.webp"
+    },
+    {
+      "id": "c877",
+      "category_nameC": "dsds",
+      "category_typeC": "3sdad",
+      "price_rangeC": 212,
+      "descriptionC": "sdad",
+      "rateC": 23,
+      "image2C": "ds",
+      "isFavoriteC": true
     }
   ],
   "envios": [

@@ -35,20 +35,24 @@
 
         <div class="image-container">
 
-          <img src="{{element.image}}" alt="Imagen del producto">
           <img src="{{element.image2}}" alt="Imagen del producto">
         </div>
 
         <div class="details-container">
-          <div class="title">Categoria: {{element.category_type}}</div>
-          <div class="category">Tipo: Vestimenta</div>
+          <div class="title">Id: {{element.id}}</div>
+          <div class="title">Categoria: {{element.category_name}}</div>
+          <div class="category">Tipo: {{element.category_type}}</div>
 
-          <div class="price">Rango_Precios:  {{element.price_range}}</div>
+          <div class="price">Precios:  {{element.price_range}}</div>
 
           <div class="ratings-container">
             <div class="rate"> {{element.description}}</div>
           </div>
           <div class="rate-count">Comentarios: {{element.rate}}</div>
+
+          <div class="favorite">
+            En favoritos: {{ element.isFavorite ? 'Sí' : 'No' }}
+          </div>
 
         </div>
       </div>
@@ -68,4 +72,15 @@
   <tr mat-row *matRowDef="let row; columns: ['expandedDetail']" class="example-detail-row"></tr>
 
 </table>
+
+<div class="button-container">
+  <button mat-raised-button color="primary" class="large-button" routerLink="/category-form">Publicar Categoria</button>
+  <button mat-raised-button color="warn" class="large-button" routerLink="/category-delete">Eliminar Categoria</button>
+  <button mat-raised-button color="accent" class="large-button" routerLink="/category-update">Actualizar Categoria</button>
+  <button mat-raised-button color="second" class="large-button" routerLink="/category-getby-id">Obtener Categoria por Id</button>
+  <button mat-raised-button color="third" class="large-button" routerLink="/category-get-favorites">Categorias en Favoritos</button>
+
+
+</div>
+
 <mat-paginator *ngIf="dataSource" [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons></mat-paginator>

@@ -111,3 +111,59 @@
   font-weight: bold;
   text-align: left; /* Alinear el texto a la izquierda */
 }
+
+.button-container {
+  display: flex;
+  justify-content: center; /* Centrar los botones horizontalmente */
+  gap: 20px; /* Espacio entre los botones */
+  margin-top: 20px;
+}
+
+.large-button {
+  min-width: 200px; /* Ancho mínimo para los botones */
+  font-size: 18px; /* Tamaño de fuente */
+  padding: 16px; /* Espaciado interno */
+}
+
+.large-button[color="primary"] {
+  background-color: #7BB76A; /* Azul */
+  color: white;
+}
+
+.large-button[color="primary"]:hover {
+  background-color: #0d47a1; /* Azul más oscuro al pasar el mouse */
+}
+
+.large-button[color="warn"] {
+  background-color: #7BB76A; /* Rojo */
+  color: white;
+}
+
+.large-button[color="warn"]:hover {
+  background-color: #d32f2f; /* Rojo más oscuro al pasar el mouse */
+}
+
+.large-button {
+  font-size: 18px; /* Tamaño de fuente más grande */
+  padding: 12px 24px; /* Ajuste de padding para hacer el botón más grande */
+  margin-right: 10px; /* Margen derecho para separar los botones */
+}
+
+.large-button[color="accent"] {
+  background-color: #7BB76A; /* Color de fondo naranja para el botón de actualizar */
+  color: white; /* Texto en color blanco para mejor contraste */
+}
+
+.large-button[color="accent"]:hover {
+  background-color: darkorange; /* Color de fondo más oscuro al pasar el mouse */
+}
+
+.large-button[color="second"] {
+  background-color: #7BB76A; /* Color de fondo naranja para el botón de actualizar */
+  color: white; /* Texto en color blanco para mejor contraste */
+}
+
+.large-button[color="third"] {
+  background-color: #7BB76A; /* Color de fondo naranja para el botón de actualizar */
+  color: white; /* Texto en color blanco para mejor contraste */
+}

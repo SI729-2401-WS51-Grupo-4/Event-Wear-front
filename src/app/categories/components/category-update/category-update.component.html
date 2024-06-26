@@ -1,0 +1,40 @@
+<div class="container">
+  <form class="form-container" [formGroup]="updateForm" (ngSubmit)="updateCategory()">
+    <label>
+      <h2>ID de la Categoría:</h2>
+      <input type="number" formControlName="id">
+    </label>
+    <label>
+      <h2>Nombre de la Categoría:</h2>
+      <input type="text" formControlName="category_name">
+    </label>
+    <label>
+      <h2>Tipo de Categoría:</h2>
+      <input type="text" formControlName="category_type">
+    </label>
+    <label>
+      <h2>Precio:</h2>
+      <input type="number" formControlName="price_range">
+    </label>
+    <label>
+      <h2>Descripción:</h2>
+      <textarea formControlName="description"></textarea>
+    </label>
+    <label>
+      <h2>Valoración:</h2>
+      <input type="number" formControlName="rate">
+    </label>
+    <label>
+      <h2>URL de Imagen de Categoría:</h2>
+      <input type="text" formControlName="image2">
+    </label>
+    <div class="image-preview" *ngIf="updateForm.value.image2">
+      <img [src]="updateForm.value.image2" alt="Vista previa de la imagen de categoría">
+    </div>
+    <label>
+      <input type="checkbox" formControlName="isFavorite">
+      Favorito
+    </label>
+    <button type="submit">Actualizar Categoría</button>
+  </form>
+</div>
