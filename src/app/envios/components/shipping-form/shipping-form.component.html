@@ -1,0 +1,29 @@
+<h1 class="titulo">Lista de envíos</h1>
+
+
+<form [formGroup]="form" (ngSubmit)="submit()">
+    <div>
+        <label for="address">Dirección:</label>
+        <input type="text" id="address" name="address" formControlName="address">
+    </div>
+    <div>
+        <label for="deadline">Fecha límite:</label>
+        <input type="text" id="deadline" name="deadline" formControlName="deadline">
+    </div>
+    <div>
+        <label for="rentId">ID de alquiler:</label>
+        <input type="text" id="rentId" name="rentId" formControlName="rentId">
+    </div>
+    <div formArrayName="shippingDetails" *ngFor="let detail of details.controls; index as i">
+        <div [formGroupName]="i">
+            <label for="description">Descripción:</label>
+            <input type="text" id="description" name="description" formControlName="description">
+            <label for="importancelevel">Nivel de importancia:</label>
+            <input type="text" id="importancelevel" name="importancelevel" formControlName="importancelevel">
+            <button type="button" (click)="removeDetail(i)">Eliminar detalle</button>
+        </div>
+    </div>
+    <button (click)="addDetail()">Agregar detalle</button>
+    <button type="submit">Crear envío</button>
+</form>
+
