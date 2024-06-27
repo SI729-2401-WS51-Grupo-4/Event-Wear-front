@@ -10,10 +10,7 @@
 
   <span class="mat-spacer"></span>
 
-  <a mat-button [routerLink]="['/login']" style="margin-right: 10px; margin-top: 0.3%;">
-    <img class="login" src="https://i.ibb.co/y53Jsvh/user-sign-white-icon-vector-15479703.png" style="width: 35px; height: auto;">
-  </a>
-
+  <app-authentication-section style="color: white;"></app-authentication-section>
   <a mat-button [routerLink]="['/cart']" style="margin-right: 10px; margin-top: 0.3%;">
     <img class="logo-carrito" src="https://i.ibb.co/3MX0mdm/shopping-cart.png" style="width: 35px; height: auto;">
   </a>
@@ -30,7 +27,6 @@
   <button mat-menu-item [routerLink]="['/pay-list']">Lista de pagos</button>
   <button mat-menu-item [routerLink]="['/user-option']">Opciones del usuario</button>
   <button mat-menu-item [routerLink]="['/chats']">Chats</button>
-
 </mat-menu>
 
 

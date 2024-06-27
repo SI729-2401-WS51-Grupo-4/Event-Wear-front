@@ -25,6 +25,8 @@ import {CategoryFormComponent} from "./categories/components/category-form/categ
 import {CategoryUpdateComponent} from "./categories/components/category-update/category-update.component";
 import {CategoryGetbyIdComponent} from "./categories/components/category-getby-id/category-getby-id.component";
 import {CategoryGetFavoritesComponent} from "./categories/components/category-get-favorites/category-get-favorites.component";
+import {SignInComponent} from "./iam/pages/sign-in/sign-in.component";
+import {SignUpComponent} from "./iam/pages/sign-up/sign-up.component";
 export const routes: Routes = [
 
   {path: 'home', component: HomeComponent},
@@ -47,6 +49,8 @@ export const routes: Routes = [
   { path: 'category-update', component: CategoryUpdateComponent},
   { path: 'category-getby-id', component: CategoryGetbyIdComponent},
   {path: 'category-get-favorites', component: CategoryGetFavoritesComponent},
+  { path: 'sign-in', component: SignInComponent },
+  { path: 'sign-up', component: SignUpComponent},
   {path: 'orden/envio-formulario', component: ShippingFormComponent }
 
   ];

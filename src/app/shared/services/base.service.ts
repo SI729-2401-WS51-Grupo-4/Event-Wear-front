@@ -3,7 +3,6 @@ import { environment } from "../../../environments/environment";
 import { HttpClient, HttpErrorResponse, HttpHeaders } from "@angular/common/http";
 import { catchError, Observable, retry, throwError } from "rxjs";
 
-
 @Injectable({
   providedIn: 'root'
 })
@@ -18,7 +17,7 @@ export class BaseService<T> {
     })
   }
 
-  constructor(public http: HttpClient) {  }
+  constructor(protected http: HttpClient) {  }
 
   handleError(error: HttpErrorResponse) {
     // Default error handling
@@ -29,17 +28,6 @@ export class BaseService<T> {
       console.log(`Backend returned code ${error.status}, body was ${error.error}`);
     }
     return throwError(() => new Error('Something happened with request, please try again later'));
-  }
-
-
-  // Get All Resources
-  getAll(): Observable<T> {
-    return this.http.get<T>(this.resourcePath(), this.httpOptions)
-      .pipe(retry(2), catchError(this.handleError));
-  }
-
-  private resourcePath(): string {
-    return `${this.basePath}${this.resourceEndpoint}`;
   }
 
   // Create Resource
@@ -60,15 +48,13 @@ export class BaseService<T> {
       .pipe(retry(2), catchError(this.handleError));
   }
 
-  getById(id: any): Observable<T> {
-    return this.http.get<T>(`${this.resourcePath()}/${id}`, this.httpOptions)
+  // Get All Resources
+  getAll(): Observable<T> {
+    return this.http.get<T>(this.resourcePath(), this.httpOptions)
       .pipe(retry(2), catchError(this.handleError));
   }
 
-      getDetailsById(id: number): Observable<T> {
-      const urlWithId = `http://localhost:8090/shippingDetails/${id}`;
-      return this.http.get<T>(urlWithId, this.httpOptions)
-        .pipe(retry(2), catchError(this.handleError) );
-    }
-
+  private resourcePath(): string {
+    return `${this.basePath}${this.resourceEndpoint}`;
+  }
 }
