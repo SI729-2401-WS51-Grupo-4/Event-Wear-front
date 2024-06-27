@@ -18,7 +18,7 @@ export class BaseService<T> {
     })
   }
 
-  constructor(private http: HttpClient) {  }
+  constructor(public http: HttpClient) {  }
 
   handleError(error: HttpErrorResponse) {
     // Default error handling
