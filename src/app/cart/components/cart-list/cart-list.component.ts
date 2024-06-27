@@ -9,13 +9,14 @@ import {MatButton, MatIconButton} from "@angular/material/button";
 import {Router, RouterLink} from "@angular/router";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import {MatIcon} from "@angular/material/icon";
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-cart-list',
   templateUrl: './cart-list.component.html',
   styleUrls: ['./cart-list.component.css'],
   standalone: true,
-  imports: [MatCard, MatCardModule, NgForOf, MatDivider, MatButton, RouterLink, ReactiveFormsModule, MatIcon, MatIconButton, FormsModule],
+  imports: [RouterModule, MatCard, MatCardModule, NgForOf, MatDivider, MatButton, RouterLink, ReactiveFormsModule, MatIcon, MatIconButton, FormsModule],
 })
 export class CartListComponent {
   cartItems: Cart[] = [];
