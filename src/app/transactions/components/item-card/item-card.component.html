@@ -1,0 +1,21 @@
+<div class="title">Pagos Realizados</div>
+<hr>
+<div *ngFor="let transaction of transactions" class="purchase-card">
+  <mat-card>
+    <mat-card-header class="purchase-header">
+        <div>
+          <mat-card-title>ID: {{transaction.Id}}</mat-card-title>
+          <mat-card-title>Total: S/. {{transaction.amount}}</mat-card-title>
+          <mat-card-subtitle>Fecha del pago: {{transaction.date}}</mat-card-subtitle>
+        </div>
+        <br>
+    </mat-card-header>
+        <mat-card *ngFor="let rent of transaction.rents" class="item-card">
+          <mat-card-header>
+            <p style="font-size: 3em">Rent Id: {{rent}}</p>
+          </mat-card-header>
+          <div style="background-color: #98db8c; width: 100%; height: 5px"></div>
+        </mat-card>
+
+  </mat-card>
+</div>
