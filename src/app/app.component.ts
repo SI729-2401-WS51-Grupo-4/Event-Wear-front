@@ -32,7 +32,9 @@ export class AppComponent {
       { path: '/user-option', title: 'User-Option'},
       { path: '/details', title: 'Details'},
       { path: '/chats', title: 'Chats'},
-      { path: '/messages', title: 'Messages'}
+      { path: '/messages', title: 'Messages'},
+      { path : '/orden/envio-formulario', title: 'Formulario'}
+
 
 
     ]
