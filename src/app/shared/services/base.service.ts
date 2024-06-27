@@ -65,4 +65,10 @@ export class BaseService<T> {
       .pipe(retry(2), catchError(this.handleError));
   }
 
+      getDetailsById(id: number): Observable<T> {
+      const urlWithId = `http://localhost:8090/shippingDetails/${id}`;
+      return this.http.get<T>(urlWithId, this.httpOptions)
+        .pipe(retry(2), catchError(this.handleError) );
+    }
+
 }
