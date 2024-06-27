@@ -6,6 +6,7 @@ import {RegisterComponent} from "./public/pages/register/register.component";
 import {UserOptionComponent} from "./public/pages/user-option/user-option.component";
 
 import {EnviosListaComponent} from "./envios/components/envios-lista/envios-lista.component";
+import {ShippingFormComponent} from "./envios/components/shipping-form/shipping-form.component";
 
 import {ProductDetailsComponent} from "./details/pages/product-details/product-details.component";
 
@@ -45,5 +46,7 @@ export const routes: Routes = [
   { path: 'messages', component: MessagesComponent},
   { path: 'category-update', component: CategoryUpdateComponent},
   { path: 'category-getby-id', component: CategoryGetbyIdComponent},
-  {path: 'category-get-favorites', component: CategoryGetFavoritesComponent}
+  {path: 'category-get-favorites', component: CategoryGetFavoritesComponent},
+  {path: 'orden/envio-formulario', component: ShippingFormComponent }
+
   ];
