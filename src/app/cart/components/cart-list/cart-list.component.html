@@ -9,4 +9,4 @@
     </div>
   </div>
 </div>
-<button class="card-total"  mat-raised-button  >Pagar: S/. {{ calculateTotal() }}</button>
+<button class="card-total"  mat-raised-button [routerLink]="['/orden/envio-formulario']"  >Pagar: S/. {{ calculateTotal() }}</button>
