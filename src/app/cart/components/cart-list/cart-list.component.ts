@@ -32,41 +32,40 @@ export class CartListComponent {
       this.cartItems = data;
     });
   }
-  // cart-list.component.ts
-updateQuantity(itemId: number, quantity: number): void {
+  updateQuantity(itemId: number, quantity: number): void {
   this.cartService.updateQuantity(itemId, quantity).subscribe((updatedItem: Cart) => {
     // Actualiza la cantidad del producto en el carrito
-    const item = this.cartItems.find(item => item.id === itemId);
+    const item = this.cartItems.find(item => item.Id === itemId);
     if (item) {
       item.quantity = updatedItem.quantity;
     }
   });
-}
-
-calculateTotal() {
-  let total = 0;
-  for (const item of this.cartItems) {
-    // Asegúrate de que la cantidad siempre sea un número
-    const quantity = Number(item.quantity) || 0;
-    total += item.price * quantity;
   }
-  return total;
-}
 
-removeFromCart(itemId: number): void {
-  const item = this.cartItems.find(item => item.id === itemId);
-  if (item) {
-    if (item.quantity > 1) {
-      // Si la cantidad del producto es mayor que 1, disminuye la cantidad
-      this.updateQuantity(itemId, item.quantity - 1);
-    } else {
-      // Si la cantidad del producto es 1, elimina el producto del carrito
-      this.cartService.removeFromCart(itemId).subscribe(() => {
-        this.getCartItems();
-      });
+  removeFromCart(itemId: number): void {
+    const item = this.cartItems.find(item => item.Id === itemId);
+    if (item) {
+      if (item.quantity > 1) {
+        // Si la cantidad del producto es mayor que 1, disminuye la cantidad
+        this.updateQuantity(itemId, item.quantity - 1);
+      } else {
+        // Si la cantidad del producto es 1, elimina el producto del carrito
+        this.cartService.removeFromCart(itemId).subscribe(() => {
+          this.getCartItems();
+        });
+      }
     }
   }
-}
+
+  calculateTotal() {
+    let total = 0;
+    for (const item of this.cartItems) {
+      // Asegúrate de que la cantidad siempre sea un número
+      const quantity = Number(item.quantity) || 0;
+      total += item.price * quantity;
+    }
+    return total;
+  }
   protected readonly HTMLInputElement = HTMLInputElement;
   protected readonly Number = Number;
 }

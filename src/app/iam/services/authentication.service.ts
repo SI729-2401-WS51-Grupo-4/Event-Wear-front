@@ -20,7 +20,18 @@ export class AuthenticationService {
   private signedInUserId: BehaviorSubject<number> = new BehaviorSubject<number>(0);
   private signedInUsername: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
-  constructor(private router: Router, private http: HttpClient) { }
+  constructor(private router: Router, private http: HttpClient) {
+    const isSignedIn = localStorage.getItem('isSignedIn') === 'true';
+    this.signedIn.next(isSignedIn);
+    if (isSignedIn) {
+      const userId = Number(localStorage.getItem('userId') || '0');
+      this.signedInUserId.next(userId);
+      const username = localStorage.getItem('username') || ''; // Proporcionar un valor predeterminado en caso de null
+      this.signedInUsername.next(username);
+      const token = localStorage.getItem('token') || '';
+      console.log(`Signed in as ${username} with token ${token}`);
+    }
+  }
 
   get isSignedIn() {
     return this.signedIn.asObservable();
@@ -53,14 +64,18 @@ export class AuthenticationService {
       .subscribe({
         next: (response) => {
           this.signedIn.next(true);
+          localStorage.setItem('isSignedIn', 'true'); // Almacenar el estado de la sesión
           this.signedInUserId.next(response.id);
+          localStorage.setItem('userId', response.id.toString());
           this.signedInUsername.next(response.username);
+          localStorage.setItem('username', response.username); // Almacenar el username
           localStorage.setItem('token', response.token);
           console.log(`Signed in as ${response.username} with token ${response.token}`);
           this.router.navigate(['/']).then();
         },
         error: (error) => {
           this.signedIn.next(false);
+          localStorage.setItem('isSignedIn', 'false');
           this.signedInUserId.next(0);
           this.signedInUsername.next('');
           console.error(`Error while signing in: ${error}`);
@@ -76,8 +91,11 @@ export class AuthenticationService {
    */
   signOut() {
     this.signedIn.next(false);
+    localStorage.removeItem('isSignedIn');
     this.signedInUserId.next(0);
+    localStorage.removeItem('userId');
     this.signedInUsername.next('');
+    localStorage.removeItem('username'); // Borrar el username
     localStorage.removeItem('token');
     this.router.navigate(['/sign-in']).then();
   }
