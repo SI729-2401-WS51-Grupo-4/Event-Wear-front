@@ -1,48 +1,54 @@
 <div class="sign-up-content">
-  <mat-card>
+  <mat-card class="card-container">
     <mat-card-header>
-      <mat-card-title>Sign Up</mat-card-title>
+      <mat-card-title class="title-sign-up">Sign Up</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <form [formGroup]="form" (submit)="onSubmit()">
-        <mat-form-field>
-          <input matInput placeholder="Username" id="username" name="username" required formControlName="username">
-          <mat-error *ngIf="isInvalidControl(form,'username')">{{ errorMessagesForControl(form,'username')}}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="password" placeholder="Password" id="password" name="password" formControlName="password">
-          <mat-error *ngIf="isInvalidControl(form,'password')">{{ errorMessagesForControl(form,'password')}}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Firstname" id = "firstname" name = "firstname" formControlName = "firstname">
-          <mat-error *ngIf="isInvalidControl(form,'firstname')">{{ errorMessagesForControl(form,'firstname')}}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Lastname" id = "lastName" name = "lastName" formControlName = "lastName">
-          <mat-error *ngIf="isInvalidControl(form,'lastName')">{{ errorMessagesForControl(form,'lastName')}}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="email" placeholder="Email" id = "email" name = "email" formControlName = "email">
-          <mat-error *ngIf="isInvalidControl(form,'email')">{{ errorMessagesForControl(form,'email')}}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Phone" id = "phone" name = "phone" formControlName = "number">
-          <mat-error *ngIf="isInvalidControl(form,'number')">{{ errorMessagesForControl(form,'number')}}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="City" id = "city" name = "city" formControlName = "city">
-          <mat-error *ngIf="isInvalidControl(form,'city')">{{ errorMessagesForControl(form,'city')}}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Postal Code" id = "postalCode" name = "postalCode" formControlName = "postalCode">
-          <mat-error *ngIf="isInvalidControl(form,'postalCode')">{{ errorMessagesForControl(form,'postalCode')}}</mat-error>
-        </mat-form-field>
-        <mat-form-field>
-          <input matInput type="text" placeholder="Country" id = "country" name = "country" formControlName = "country">
-          <mat-error *ngIf="isInvalidControl(form,'country')">{{ errorMessagesForControl(form,'country')}}</mat-error>
-        </mat-form-field>
-        <button mat-raised-button color="primary">Sign Up</button>
-      </form>
+      <div >
+        <form class="content-wrapper" [formGroup]="form" (submit)="onSubmit()">
+          <mat-form-field class = "card-content">
+            <input matInput placeholder="Username" id="username" name="username" required formControlName="username">
+            <mat-error *ngIf="isInvalidControl(form,'username')">{{ errorMessagesForControl(form,'username')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="password" placeholder="Password" id="password" name="password" formControlName="password">
+            <mat-error *ngIf="isInvalidControl(form,'password')">{{ errorMessagesForControl(form,'password')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="text" placeholder="Firstname" id = "firstName" name = "firstname" formControlName = "firstName">
+            <mat-error *ngIf="isInvalidControl(form,'firstName')">{{ errorMessagesForControl(form,'firstName')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="text" placeholder="Lastname" id = "lastName" name = "lastName" formControlName = "lastName">
+            <mat-error *ngIf="isInvalidControl(form,'lastName')">{{ errorMessagesForControl(form,'lastName')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="email" placeholder="Email" id = "email" name = "email" formControlName = "email">
+            <mat-error *ngIf="isInvalidControl(form,'email')">{{ errorMessagesForControl(form,'email')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="text" placeholder="Street" id = "street" name = "street" formControlName = "street">
+            <mat-error *ngIf="isInvalidControl(form,'street')">{{ errorMessagesForControl(form,'street')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="text" placeholder="Phone" id = "phone" name = "phone" formControlName = "number">
+            <mat-error *ngIf="isInvalidControl(form,'number')">{{ errorMessagesForControl(form,'number')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="text" placeholder="City" id = "city" name = "city" formControlName = "city">
+            <mat-error *ngIf="isInvalidControl(form,'city')">{{ errorMessagesForControl(form,'city')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="text" placeholder="Postal Code" id = "postalCode" name = "postalCode" formControlName = "postalCode">
+            <mat-error *ngIf="isInvalidControl(form,'postalCode')">{{ errorMessagesForControl(form,'postalCode')}}</mat-error>
+          </mat-form-field>
+          <mat-form-field class = "card-content">
+            <input matInput type="text" placeholder="Country" id = "country" name = "country" formControlName = "country">
+            <mat-error *ngIf="isInvalidControl(form,'country')">{{ errorMessagesForControl(form,'country')}}</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary">Sign Up</button>
+        </form>
+      </div>
     </mat-card-content>
   </mat-card>
 </div>

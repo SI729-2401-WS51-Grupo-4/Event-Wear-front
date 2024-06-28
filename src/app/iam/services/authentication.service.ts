@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import {environment} from "../../../environments/environment";
 import {HttpClient, HttpHeaders} from "@angular/common/http";
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject, Observable} from "rxjs";
 import {Router} from "@angular/router";
 import {SignInRequest} from "../model/sign-in.request";
 import {SignInResponse} from "../model/sign-in.response";
@@ -39,20 +39,9 @@ export class AuthenticationService {
    * @param signUpRequest The sign up request.
    * @returns The sign up response.
    */
-  signUp(signUpRequest: SignUpRequest) {
-    return this.http.post<SignUpResponse>(`${this.basePath}/authentication/sign-up`, signUpRequest, this.httpOptions)
-      .subscribe({
-        next: (response) => {
-          console.log(`Signed up as ${response.username} with id: ${response.id}`);
-          this.router.navigate(['/sign-in']).then();
-        },
-        error: (error) => {
-          console.error(`Error while signing up: ${error}`);
-          this.router.navigate(['/sign-up']).then();
-        }
-      });
+  signUp(signUpRequest: SignUpRequest): Observable<SignUpResponse> {
+    return this.http.post<SignUpResponse>(`${this.basePath}/authentication/sign-up`, signUpRequest, this.httpOptions);
   }
-
   /**
    * Sign in a user.
    * @param signInRequest The sign in request.

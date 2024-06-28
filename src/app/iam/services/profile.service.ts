@@ -14,9 +14,10 @@ export class ProfileService {
   constructor(private http: HttpClient) { }
 
   getProfile() {
-    return this.http.get(`${this.basePath}/profile`, this.httpOptions);
+    return this.http.get(`${this.basePath}/profiles`, this.httpOptions);
   }
   createProfile(profile: any) {
-    return this.http.post(`${this.basePath}/profile`, profile, this.httpOptions);
+    console.log(profile);
+    return this.http.post(`${this.basePath}/profiles`, profile, this.httpOptions);
   }
 }

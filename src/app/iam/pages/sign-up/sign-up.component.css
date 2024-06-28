@@ -4,3 +4,26 @@
   align-items: center;
   height: 100vh;
 }
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.card-content{
+  width: 70%;
+  margin-top: 10px;
+}
+.card-container{
+  width: 70%;
+  display: flex;
+
+}
+.title-sign-up{
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  font-weight: 600;
+  text-align: center;
+}
