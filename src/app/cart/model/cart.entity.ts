@@ -1,13 +1,13 @@
 export class Cart {
-  cartItemId: string; // Nuevo campo
+  cartItemId: number;
   Id:number;
   Urlimage: string;
   title: string;
   price: number;
   quantity: number;
 
-  constructor(cartItemId: string, Id:number=0, Urlimage: string=" ", title: string=" ", price: number=0,quantity:number=0){
-    this.cartItemId = cartItemId; // Inicializar el nuevo campo
+  constructor(cartItemId: number, Id:number=0, Urlimage: string=" ", title: string=" ", price: number=0,quantity:number=0){
+    this.cartItemId = cartItemId;
     this.Id=Id;
     this.Urlimage = Urlimage;
     this.title = title;

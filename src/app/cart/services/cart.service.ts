@@ -17,29 +17,27 @@ export class CartsService extends BaseService<Cart> {
     super(http);
   }
 
-   getCartItems(): Observable<any> {
-  const userId = localStorage.getItem('userId');
-  console.log(this.httpOptions.headers.get('Authorization'));
-  const observable = this.http.get(`${this.baseUrl}/cartItems/${userId}`, this.httpOptions);
-  observable.subscribe(data => console.log(data));
-  return observable;
+  getCartItems(): Observable<any> {
+    const userId = localStorage.getItem('userId');
+    console.log(this.httpOptions.headers.get('Authorization'));
+    const observable = this.http.get(`${this.baseUrl}/cartItems/${userId}`, this.httpOptions);
+    observable.subscribe(data => console.log(data));
+    return observable;
   }
 
-  removeFromCart(itemId: number): Observable<any> {
+  removeFromCart(cartItemId: number): Observable<any> {
     const userId = localStorage.getItem('userId');
-    return this.http.delete(`${this.baseUrl}/delete/${userId}/${itemId}`,this.httpOptions);
+    return this.http.delete(`${this.baseUrl}/delete/${userId}/${cartItemId}`, this.httpOptions);
   }
 
-  updateQuantity(itemId: number, quantity: number): Observable<any> {
+  updateQuantity(cartItemId: number, quantity: number): Observable<any> {
     const userId = localStorage.getItem('userId');
-  console.log(`Updating quantity for item ${itemId} to ${quantity}`);
-  if (quantity > 0) {
-    // Si la cantidad es mayor que 0, actualiza la cantidad
-    return this.http.put(`${this.baseUrl}/update/${userId}/${itemId}`, {quantity},this.httpOptions);
-  } else {
-    // Si la cantidad es 0, elimina el producto del carrito
-    return this.http.delete(`${this.baseUrl}/update/${userId}/${itemId}`,this.httpOptions);
-  }
+    console.log(`Updating quantity for cart item ${cartItemId} to ${quantity}`);
+    if (quantity > 0) {
+      return this.http.put(`${this.baseUrl}/update/${userId}/${cartItemId}`, {newQuantity: quantity}, this.httpOptions);
+    } else {
+      return this.http.delete(`${this.baseUrl}/delete/${userId}/${cartItemId}`, this.httpOptions);
+    }
   }
 }
 

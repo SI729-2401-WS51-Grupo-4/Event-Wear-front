@@ -35,19 +35,20 @@ export class ProductFormComponent implements OnInit {
   }
 
   saveProduct(): void {
-    if (this.productForm.valid) {
-      const product: ProductRequest = this.productForm.value;
-      this.authenticationService.currentUserId.subscribe(id => {
-        product.lessorId = id;
-      });
-      if (product.id) {
-        console.log(product);
-        this.productsService.updateProduct(product.id, product).subscribe();
-      } else {
-        console.log(product);
-        this.productsService.createProduct(product).subscribe();
-        this.router.navigate(['/product-list']).then();
-      }
+  if (this.productForm.valid) {
+    const product: Product = this.productForm.value;
+    this.authenticationService.currentUserId.subscribe(id => {
+      product.lessorId = id;
+    });
+    if (product.publicationId) {
+      console.log(product);
+      this.productsService.updateProduct(product.publicationId, product).subscribe();
+    } else {
+      console.log(product);
+      this.productsService.createProduct(product).subscribe();
+      this.router.navigate(['/product-list']).then();
+
     }
   }
+}
 }

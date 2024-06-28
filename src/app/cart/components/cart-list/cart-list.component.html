@@ -4,8 +4,8 @@
     <div class="card-body">
       <h5 class="card-title">{{ item.title }}</h5>
       <p class="card-price">Precio: S/. {{ item.price }}</p>
-    <input type="number" [(ngModel)]="item.quantity" min="1" (input)="updateQuantity(item.Id, item.quantity)">
-      <button class="btn btn-danger" mat-raised-button (click)="removeFromCart(item.Id)">Eliminar</button>
+      <input type="number" [(ngModel)]="item.quantity" min="1" (input)="updateQuantity(Number(item.cartItemId), item.quantity)">
+      <button class="btn btn-danger" mat-raised-button (click)="removeFromCart(Number(item.cartItemId))">Eliminar</button>
     </div>
   </div>
 </div>

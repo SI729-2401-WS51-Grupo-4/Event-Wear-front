@@ -32,25 +32,32 @@ export class CartListComponent {
       this.cartItems = data;
     });
   }
-  updateQuantity(itemId: number, quantity: number): void {
-  this.cartService.updateQuantity(itemId, quantity).subscribe((updatedItem: Cart) => {
-    // Actualiza la cantidad del producto en el carrito
-    const item = this.cartItems.find(item => item.Id === itemId);
-    if (item) {
-      item.quantity = updatedItem.quantity;
-    }
-  });
+  updateQuantity(cartItemId: number, quantity: number): void {
+    this.cartService.updateQuantity(cartItemId, quantity).subscribe((updatedItem: Cart) => {
+      // Verifica si updatedItem es nulo
+      if (updatedItem) {
+        // Actualiza la cantidad del producto en el carrito
+        const item = this.cartItems.find(item => item.cartItemId === cartItemId);
+        if (item) {
+          item.quantity = updatedItem.quantity;
+        }
+      } else {
+        console.error('updatedItem es nulo');
+      }
+      // Recarga todos los elementos del carrito después de que se actualiza la cantidad
+      this.getCartItems();
+    });
   }
 
-  removeFromCart(itemId: number): void {
-    const item = this.cartItems.find(item => item.Id === itemId);
+  removeFromCart(cartItemId: number): void {
+    const item = this.cartItems.find(item => item.cartItemId === cartItemId);
     if (item) {
       if (item.quantity > 1) {
-        // Si la cantidad del producto es mayor que 1, disminuye la cantidad
-        this.updateQuantity(itemId, item.quantity - 1);
+
+        this.updateQuantity(cartItemId, item.quantity - 1);
       } else {
-        // Si la cantidad del producto es 1, elimina el producto del carrito
-        this.cartService.removeFromCart(itemId).subscribe(() => {
+
+        this.cartService.removeFromCart(cartItemId).subscribe(() => {
           this.getCartItems();
         });
       }
@@ -60,7 +67,6 @@ export class CartListComponent {
   calculateTotal() {
     let total = 0;
     for (const item of this.cartItems) {
-      // Asegúrate de que la cantidad siempre sea un número
       const quantity = Number(item.quantity) || 0;
       total += item.price * quantity;
     }

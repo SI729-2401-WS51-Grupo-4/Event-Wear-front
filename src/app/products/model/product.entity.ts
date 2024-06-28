@@ -1,16 +1,18 @@
 export class Product {
-  id: number;
+  publicationId: number;
   image: string;
   title: string;
   description: string;
   price: number;
   rating: string;
+  lessorId: number; // Agrega esta línea
   constructor() {
-    this.id = 0;
+    this.publicationId = 0;
     this.image = '';
     this.title = '';
     this.description = '';
     this.price = 0;
     this.rating = '';
+    this.lessorId = 0; // Agrega esta línea
   }
 }

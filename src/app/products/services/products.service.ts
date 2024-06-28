@@ -8,10 +8,10 @@ import {BaseService} from "../../shared/services/base.service";
   providedIn: 'root'
 })
 export class ProductsService extends BaseService<Product>{
-  private baseUrl = 'http://localhost:8090/api/v1/publications';
+  private baseUrl = 'http://localhost:8090/api/v1';
   constructor(http: HttpClient) { super(http);}
   getProducts(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/all-publications`, this.  httpOptions = {
+    return this.http.get(`${this.baseUrl}/publications/all-publications`, this.  httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -19,7 +19,7 @@ export class ProductsService extends BaseService<Product>{
     });
   }
   createProduct(product: Product): Observable<any> {
-    return this.http.post(`${this.baseUrl}/create-publication`, product, this.  httpOptions = {
+    return this.http.post(`${this.baseUrl}/publications/create-publication`, product, this.  httpOptions = {
       headers: new HttpHeaders({
         'Content-type': 'application/json',
         'Authorization': `Bearer ${localStorage.getItem('token')}`
@@ -27,23 +27,27 @@ export class ProductsService extends BaseService<Product>{
     });
   }
 
-  updateProduct(id: number, product: Product): Observable<any> {
-    return this.http.put(`${this.baseUrl}/products/${id}`, product);
+  updateProduct(publicationId: number, product: Product): Observable<any> {
+    return this.http.put(`${this.baseUrl}/products/${publicationId}`, product);
   }
 
   addToCart(product: any): Observable<any> {
- return this.http.get<any[]>(`${this.baseUrl}/shoppingCart`).pipe(
-  switchMap((items: any[]) => {
-    const item = items.find(item => item.id === product.id);
-    if (item) {
-      // Si el producto ya está en el carrito, actualiza la cantidad
-      return this.http.put(`${this.baseUrl}/shoppingCart/${item.id}`, { ...item, quantity: item.quantity + 1 });
-    } else {
-      // Si el producto no está en el carrito, lo agrega
-      return this.http.post(`${this.baseUrl}/shoppingCart`, { ...product, quantity: 1 });
-    }
-  })
-);
-}
+    const userId = localStorage.getItem('userId');
+    console.log(this.httpOptions.headers.get('Authorization'));
+    return this.http.get<any[]>(`${this.baseUrl}/cart/cartItems/${userId}`, this.httpOptions).pipe(
+      switchMap((items: any[]) => {
+        const item = items.find(item => item.publicationId === product.publicationId);
+        if (item) {
+          // Si el producto ya está en el carrito, actualiza la cantidad
+          return this.http.put(`${this.baseUrl}/cart/update/${userId}/${item.publicationId}`, { ...item, quantity: item.quantity + 1 }, this.httpOptions);
+        } else {
+          // Si el producto no está en el carrito, lo agrega
+          const productToPost = { ...product, quantity: 1 };
+          console.log('Agregando al carrito:', productToPost);
+          return this.http.post(`${this.baseUrl}/cart/add/${userId}`, productToPost, this.httpOptions);
+        }
+      })
+    );
+  }
 
 }
