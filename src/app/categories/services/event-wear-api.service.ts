@@ -15,12 +15,10 @@ export class EventWearApiService extends BaseService<Category>{
   }
 
   getCategories(): Observable<any> {
-    console.log(this.httpOptions.headers.get('Authorization'));
     return this.http.get(`${this.baseUrl}`, this.httpOptions);
   }
 
   createCategory(category: Category): Observable<any> {
-    console.log(this.httpOptions.headers.get('Authorization'));
     return this.http.post<Category>(`${this.baseUrl}`, category, this.httpOptions);
   }
 

@@ -28,7 +28,6 @@ export class ProductCardComponent {
   constructor(private productsService: ProductsService, private router: Router) {}
   ngOnInit(): void {
     this.productsService.getProducts().subscribe((data: any) => {
-
       this.products = data;
       this.filteredProducts = [...this.products];
     });

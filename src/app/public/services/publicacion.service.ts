@@ -2,15 +2,16 @@ import { Injectable } from '@angular/core';
 import { BaseService } from "../../shared/services/base.service";
 import { HttpClient } from "@angular/common/http";
 import {Observable} from "rxjs";
+import {Product} from "../../products/model/product.entity";
 
 @Injectable({
   providedIn: 'root'
 })
-export class PublicacionService
+export class PublicationService extends BaseService<Product>
 {
-  private baseUrl = 'https://my-json-server.typicode.com/AdrianoSCruzP/db-server';
-  constructor(private http: HttpClient) {  }
-  getAll(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/products`);
+  private baseUrl = 'http://localhost:8090/api/v1/publications';
+  constructor(http: HttpClient) { super(http);}
+  getAllProducts(): Observable<any> {
+    return this.http.get(`${this.baseUrl}`, this.httpOptions);
   }
 }
