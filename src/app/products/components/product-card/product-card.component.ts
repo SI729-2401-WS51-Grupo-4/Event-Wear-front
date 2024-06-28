@@ -43,6 +43,7 @@ export class ProductCardComponent {
   cartItems: any[] = []; // Lista de productos en el carrito
 
   addToCart(product: any): void {
+    console.log(product);
   this.productsService.addToCart(product).subscribe(() => {
     console.log('Producto agregado al carrito:', product);
     this.cartItemCount++;
