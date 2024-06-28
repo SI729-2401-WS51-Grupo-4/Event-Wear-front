@@ -19,7 +19,12 @@ export class ProductsService extends BaseService<Product>{
     });
   }
   createProduct(product: Product): Observable<any> {
-    return this.http.post(`${this.baseUrl}/products`, product);
+    return this.http.post(`${this.baseUrl}/create-publication`, product, this.  httpOptions = {
+      headers: new HttpHeaders({
+        'Content-type': 'application/json',
+        'Authorization': `Bearer ${localStorage.getItem('token')}`
+      })
+    });
   }
 
   updateProduct(id: number, product: Product): Observable<any> {
